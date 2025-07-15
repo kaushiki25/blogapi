@@ -2,12 +2,14 @@ from rest_framework import serializers
 from .models import Post
 
 from django.contrib.auth.models import User
+
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.ReadOnlyField(source='author.username')  # now read-only
 
     class Meta:
         model = Post
-        fields = ['id', 'title', 'author']
+        fields = ['id', 'title', 'author', 'image']  # 👈 include image
+        read_only_fields = ['author']
 
 class RegisterSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
