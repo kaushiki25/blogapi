@@ -155,7 +155,8 @@ SWAGGER_SETTINGS = {
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['your-app-name.onrender.com']  # Temporary placeholder
+#ALLOWED_HOSTS = ['your-app-name.onrender.com']  # Temporary placeholder
+ALLOWED_HOSTS = ['blogapi-backend-p3wt.onrender.com', 'localhost', '127.0.0.1']
 
 # Serve static files
 STATIC_URL = '/static/'
